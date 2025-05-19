@@ -3,7 +3,7 @@
 ###################
 
 # URL de la api
-url_api = "https://cnt-7baf7564-c2ad-49af-9696-3d3030cc7e8b.containerhub.tripleten-services.com"
+url_api = "https://cnt-061a60c9-0f19-4aee-9443-a64bc07e26af.containerhub.tripleten-services.com"
 
 # Endpoint para crear la kit
 api_create_kit = "/api/v1/kits"

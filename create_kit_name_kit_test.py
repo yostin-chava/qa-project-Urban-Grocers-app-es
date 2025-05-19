@@ -40,56 +40,56 @@ def negative_assert_code_400(kit_body):
 ## Prueba 1: El número permitido de caracteres (1): ##
 ## Se pasa el parametro kit_body = {"name": "a"}    ##
 ######################################################
-def test_1():
+def test_1_create_kit_with_one_character_name():
     positive_assert({"name": "a"})
 
 ###############################################################
 ## Prueba 2: El número permitido de caracteres (511):        ##
 ## Se pasa el parametro kit_body que esta en el archivo data ##
 ###############################################################
-def test_2():
+def test_2_create_kit_with_511_characters_name():
     positive_assert(data.kit_body_test_2)
 
 ###############################################################################
 ## Prueba 3: El número de caracteres es menor que la cantidad permitida (0): ##
 ## Se pasa el parametro kit_body = {"name": ""}                              ##
 ###############################################################################
-def test_3():
+def test_3_create_kit_with_empty_name_should_return_400():
     negative_assert_code_400({"name": ""})
 
 #################################################################################
 ## Prueba 4: El número de caracteres es mayor que la cantidad permitida (512): ##
 ## Se pasa el parametro kit_body que esta en el archivo data                   ##
 #################################################################################
-def test_4():
+def test_4_create_kit_with_511_characters_name_should_return_400():
     negative_assert_code_400(data.kit_body_test_4)
 
 ########################################################
 ## Prueba 5: Se permiten caracteres especiales:       ##
 ## Se pasa el parametro kit_body = {"name": ""№%@","} ##
 ########################################################
-def test_5():
+def test_5_create_kit_with_special_character_name():
     positive_assert({"name":"\"№%@\","})
 
 #######################################################
 ## Prueba 6: Se permiten espacios:                   ##
 ## Se pasa el parametro kit_body = {"name": "A Aaa"} ##
 #######################################################
-def test_6():
+def test_6_create_kit_with_space_in_name():
     positive_assert({"name": "A Aaa"})
 
 #####################################################
 ## Prueba 7: Se permiten números:                  ##
 ## Se pasa el parametro kit_body = {"name": "123"} ##
 #####################################################
-def test_7():
+def test_7_create_kit_with_number_string_name():
     positive_assert({"name": "123"})
 
 ########################################################
 ## Prueba 8: El parámetro no se pasa en la solicitud: ##
 ## Se pasa el parametro kit_body = { }                ##
 ########################################################
-def test_8():
+def test_8_create_kit_without_body_name_should_return_400():
     # Copiamos el body que tenemos en el archivo data
     body_modified = data.body_create_kit
     # Eliminamos la key "name" del body
@@ -104,5 +104,5 @@ def test_8():
 ## Prueba 8: Se ha pasado un tipo de parámetro diferente (número): ##
 ## Se pasa el parametro kit_body = {"name": 123}                   ##
 #####################################################################
-def test_9():
+def test_9_create_kit_with_number_in_name_should_return_400():
     negative_assert_code_400({"name": 123})
