@@ -1,28 +1,71 @@
-# Proyecto Urban Grocers 
+# 🥑 Urban Grocers API Testing  
 
-Proyecto realizado por: Yostin Chavarria Castro
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Pytest](https://img.shields.io/badge/Pytest-Framework-green)
+![Requests](https://img.shields.io/badge/Requests-Library-orange)
 
-Descripcion del proyecto:
+## 📌 Descripción  
 
-    El proyecto abarca scripts de pruebas que se realizaron a la API de urban grocers, especificamente se probaron varios endpoint.
+Este proyecto contiene **pruebas automatizadas** para la API de **Urban Grocers**.  
+El objetivo es validar los endpoints principales de la API mediante el uso de **Pytest** y la librería **Requests**, asegurando que las operaciones de creación de usuarios y kits funcionen correctamente.  
 
-    El primer endpoint fue crear un usuario.
-    El segundo endpoint fue crear un kit para el usuario.
-    El tercer endpoint fue consultar si se creo el kit.
+---
 
-Requisitos 
+## 🔍 Endpoints probados  
 
-    Python version 3.8 o superior
-    Entorno virtual
-    Pytest
-    Libreria Requests
+| Método | Endpoint       | Descripción |
+|--------|----------------|-------------|
+| `POST` | `/users`       | Crear un nuevo usuario |
+| `POST` | `/kits`        | Crear un kit para el usuario |
+| `GET`  | `/kits/{id}`   | Consultar si el kit fue creado |
 
-Reglas para ejecutar las pruebas:
+---
 
-    Para ejecutar las pruebas se necesita correr el archivo create_kit_name_kit_test.py. Adicionalmente se necesita agregar un entorno virtual de python, instalar la libreria requests e instalar pytest.
+## 📂 Estructura del proyecto 
 
-    1. Clonar el repositorio utilizando el comando git clone https://github.com/tu_usuario/urban-grocers.git en la terminal
-    2. Crear el entorno virtual utilizando el comando python -m venv venv en la terminal
-    2. Instalar la libreria pytest utilizando el comando pip install pytest en la terminal.
-    3. Instalar la libreria requests utilizando el comando pip install requests.
-    4. Para ejecutar las pruebas se utiliza el comando pytest folder_del_proyecto en la terminal.
+    ```bash
+    urban-grocers/
+    ├── configuration.py              # Configuración necesaria para las pruebas (host, urls, etc.)
+    ├── data.py                       # Datos de prueba utilizados en las requests
+    ├── sender_stand_request.py       # Funciones para interactuar con la API (POST, GET, manejo de respuestas)
+    └── create_kit_name_kit_test.py   # Archivo con las pruebas automatizadas y sus assert
+
+## ⚙️ Requisitos  
+
+- Python **3.8** o superior  
+- Entorno virtual recomendado  
+- Librerías:  
+  - `pytest`  
+  - `requests`  
+
+
+## 🚀 Instalación y ejecución
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu_usuario/urban-grocers.git
+   cd urban-grocers
+
+2. Crear un entorno virtual:
+
+   ```bash
+   python -m venv venv
+
+3. Activar el entorno virtual:
+   
+   ```bash
+   # En Windows:
+   venv\Scripts\activate
+
+   # En macOS/Linux:
+   source venv/bin/activate
+
+5. Instalar las dependencias necesarias:
+
+   ```bash
+   pip install requests pytest
+
+6. Ejecutar las pruebas:
+
+    ```bash
+   pytest -v
