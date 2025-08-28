@@ -1,5 +1,6 @@
 # 🥑 Urban Grocers API Testing  
 
+**Autor**: Yostin Chavarría Castro
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Pytest](https://img.shields.io/badge/Pytest-Framework-green)
 ![Requests](https://img.shields.io/badge/Requests-Library-orange)
