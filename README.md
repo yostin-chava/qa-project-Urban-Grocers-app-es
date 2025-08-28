@@ -2,8 +2,6 @@
 
 Proyecto realizado por: Yostin Chavarria Castro
 
-Grupo: 29
-
 Descripcion del proyecto:
 
     El proyecto abarca scripts de pruebas que se realizaron a la API de urban grocers, especificamente se probaron varios endpoint.
